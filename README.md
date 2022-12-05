@@ -1,0 +1,1 @@
+Appli météo entièrement réalisée en JS Vanilla 
