@@ -1,1 +1,1 @@
-Appli météo entièrement réalisée en JS Vanilla 
+Appli météo entièrement réalisée en JS Vanilla en utilisant l'API OpenWeatherMap
