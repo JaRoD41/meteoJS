@@ -20,7 +20,7 @@ body {
 	justify-content: center;
 	width: 25rem;
 	max-width: 25rem;
-	/* height: 40rem; */
+	position: relative;
 	background-image: url('./ressources/gradient.jpg');
 	background-size: cover;
 	color: #333;
@@ -78,6 +78,7 @@ h1 span {
   align-items: center;
   flex-direction: column;
   padding: 15px 0;
+  position: relative;
 }
 
 .forecast-tab p {
@@ -86,6 +87,18 @@ h1 span {
 
 .forecast-tab p:nth-child(2){
   margin-top: 10px;
+}
+
+.forecast-tab:not(:last-child)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 40px;
+  right: 0;
+  background: #d7d7d7;
 }
 
 .forecast-container {
@@ -133,4 +146,38 @@ h1 span {
 .hour-tabs.active,
 .day-tabs.active {
   display: grid;
+}
+
+.hour-label, .day-label {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.hour-temp, .day-temp {
+  font-weight: 400;
+  color: grey;
+}
+
+.loader {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background: #F1F1F1;
+  text-align: center;
+  font-size: 1rem;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: visibility 0s 0.8s ease-out, opacity 0.4s 0.4s ease-out;
+}
+
+
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
 }
