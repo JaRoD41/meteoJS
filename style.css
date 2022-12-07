@@ -68,6 +68,26 @@ h1 span {
 	word-break: break-all;
 }
 
+.forecast {
+  display: none;
+}
+
+.forecast-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 0;
+}
+
+.forecast-tab p {
+  padding: 0 5px;
+}
+
+.forecast-tab p:nth-child(2){
+  margin-top: 10px;
+}
+
 .forecast-container {
 	width: 100%;
 	border-top: solid 1px #333;
@@ -104,14 +124,13 @@ h1 span {
 	border: 1px solid #b6b6b6;
 }
 
-.forecast-content {
-	display: grid;
-}
-
 .hour-tabs,
 .day-tabs {
 	grid-area: 1 / 1 / 2 / 2;
-  display: grid;
 	grid-template-columns: repeat(7, 1fr);
 }
 
+.hour-tabs.active,
+.day-tabs.active {
+  display: grid;
+}
